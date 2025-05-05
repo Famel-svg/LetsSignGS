@@ -67,7 +67,6 @@
   display: inline-block;
 }
 
-
 .down-arrow img {
   width: 20px;
   height: 20px;
@@ -89,8 +88,6 @@
   flex-direction: column;
   transition: width 0.3s ease;
 }
-
-
 
 .icon img{
   width: 30px;
@@ -170,7 +167,7 @@
 }
 
 .illustration {
-  max-width: 400px;
+  max-width: 600px;
   width: 100%;
   height: auto;
 }
