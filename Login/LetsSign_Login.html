@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LetsSign - Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container-fluid g-0">
+    <div class="row h-100 m-0">
+      <div class="col-md-6 d-flex flex-column form-side">
+        <h1>Seja bem vindo de volta!</h1>
+        <form>
+          <div class="mb-3 input-group">
+            <span class="input-group-text">
+              <img src="https://img.icons8.com/forma-light/96/user.png" alt="user" class="icon-img">
+            </span>
+            <input type="text" class="form-control" placeholder="Nome">
+          </div>
+          <div class="mb-3 input-group">
+            <span class="input-group-text">
+              <img src="https://img.icons8.com/pastel-glyph/100/secured-letter--v1.png" alt="email" class="icon-img">
+            </span>
+            <input type="email" class="form-control" placeholder="E-mail">
+          </div>
+          <div class="mb-3 input-group">
+            <span class="input-group-text">
+              <img src="https://img.icons8.com/fluency-systems-regular/144/lock--v1.png" alt="senha" class="icon-img">
+            </span>
+            <input type="password" class="form-control" placeholder="Senha" id="password">
+            <span class="input-group-text" id="togglePassword">
+              <img src="https://img.icons8.com/windows/96/closed-eye.png" alt="visible" id="eyeIcon" class="icon-img">
+            </span>
+          </div>
+          <button type="submit" class="submit-btn">
+            <span class="prosseguir">Prosseguir</span>
+            <img src="https://img.icons8.com/ios/100/FFFFFF/long-arrow-right--v1.png" alt="seta" class="setaicon">
+          </button>
+        </form>
+        <div class="cadastro">
+          <a href="LetsSign_Cadastrar.html">Cadastrar-se</a>
+        </div>
+      </div>
+      <div class="col-md-6 p-0">
+        <img src="ls_aperto.jpg" alt="Aperto de mãos" class="side-image">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('togglePassword').addEventListener('click', function() {
+      const passwordInput = document.getElementById('password');
+      const eyeIcon = document.getElementById('eyeIcon');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        eyeIcon.src = "https://img.icons8.com/fluency-systems-regular/96/visible--v1.png";
+        eyeIcon.alt = 'invisible';
+      } else {
+        passwordInput.type = 'password';
+        eyeIcon.src = "https://img.icons8.com/windows/96/closed-eye.png";
+        eyeIcon.alt = 'visible';
+      }
+    });
+  </script>
+</body>
+</html>
