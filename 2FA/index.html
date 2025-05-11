@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/globals.css" />
+  <link rel="stylesheet" href="./css/2FA-01.css" />
+  
+  <title>LetsSign: É simples assinar</title>
+  
+
+  <!-- JS-->
+   <script src="./js/script.js"></script> 
+</head>
+<body>
+
+  <div class="top-header">
+    <div class="left-group">
+      <span class="logo">
+        <img src="https://www.letssign.com.br/wp-content/uploads/2023/06/Logo-sign.svg" alt="LetsSign" />
+      </span>
+      <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    </div>
+    <div class="actions">
+      <span class="profile">
+        <img src="https://img.icons8.com/material-outlined/100/6A6A6A/user-male-circle.png" alt="user-male-circle">
+      </span>      
+      <span class="down-arrow"><img src="https://img.icons8.com/metro/100/6A6A6A/expand-arrow.png" alt="expand-arrow"/></span>
+    </div>
+  </div>
+
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <nav class="menu">
+        <ul>
+          <li><span class="icon"><img src="https://img.icons8.com/external-tal-revivo-light-tal-revivo/96/FFFFFF/external-traditional-residence-home-having-shelter-roof-design-basic-light-tal-revivo.png" alt="external-traditional-residence-home-having-shelter-roof-design-basic-light-tal-revivo"/></span><span class="text">Acesso rápido</span></li>
+          <li><span class="icon"><img src="https://img.icons8.com/parakeet-line/100/FFFFFF/document.png" alt="document"/></span><span class="text">Documentos</span></li>
+          <li><span class="icon"><img src="https://img.icons8.com/parakeet-line/100/FFFFFF/address-book--v2.png" alt="address-book--v2"/></span><span class="text">Contatos</span></li>
+          <li><span class="icon"><img src="https://img.icons8.com/ios/100/FFFFFF/parallel-tasks.png" alt="parallel-tasks"/></span><span class="text">Integrações</span></li>
+          <li><span class="icon"><img src="https://img.icons8.com/puffy/100/FFFFFF/settings.png" alt="settings"/></span><span class="text">Preferências</span></li>
+        </ul>
+        <div class="ajuda">
+          <span class="icon"><img src="https://img.icons8.com/material-rounded/100/FFFFFF/headset.png" alt="headset"/></span><span class="text">Ajuda</span>
+        </div>
+      </nav>
+    </aside>
+
+    </header>
+      <section class="content">
+
+        <div class="security-section">
+          <h2>Segurança da Conta</h2>
+        <div class="security-item">
+
+        <div class="security-info">
+          <h3>Autenticação em Duas Etapas (2FA)</h3>
+          <p>Adicione uma camada extra de segurança à sua conta. Com a 2FA, será necessário um código adicional ao fazer login.</p>
+
+          <button type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#modal2FA">
+          Configurar 2FA
+          </button>
+
+          <img src="./icons/avatar-bg.svg" alt="Ilustração Segurança" class="illustration" />
+        </div>
+      </section>
+
+
+    <!-- Modal Bootstrap centralizada verticalmente -->
+      <div class="modal fade" id="modal2FA" tabindex="-1" aria-labelledby="modal2FALabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-0 ">
+          <div class="modal-01 position-relative">
+            <div class="modal-header">
+              
+              <img class="icon-2fa-01" src="./icons/2FA-icon01.svg" alt="ícone de passkey" />
+              
+              <div class="text-wrapper">
+                <h1>Configurando 2FA</h1>
+                <p>passo a paso</p>
+              </div>
+              <!-- Botão fechar -->
+              <button type="button"
+                class="btn-close custom-close-btn"
+                data-bs-dismiss="modal"
+                aria-label="Fechar">
+                  <img src="./icons/out-icon.svg" alt="fechar">
+              </button>
+              
+            </div>
+    
+            <p>Cada vez que você fizer login, além da sua senha, você usará um aplicativo autenticador de sua preferência, para gerar um código de uso único.</p>
+              
+            <div class="modal-body">
+              
+              <div class="etapa-01" >
+                <span class="step-label">1ª Etapa</span>
+                <span class="step-title">Digitalize o QRCode</span>
+                <p class="modal-subtitle">Escaneie o código QR exibido na tela ou insira manualmente a chave secreta no seu aplicativo autenticador.</p>
+                
+                <div class="qrcode-box d-flex flex-column flex-md-row align-items-center ">
+                  <img class="qr-code" src="./icons/QR-Code.svg" alt="QR Code" />
+                  <div class="text-wrapper-qrcode flex-grow-1">
+                    <h1>Não é possível ler o código QR?</h1>
+                    <p>Insira a chave em seu app autenticador: </p>
+                    <input type="text" readonly class="auth-key" value="ZPFIY52GITG7WOWJ44" />
+                    <button class="copy-btn">
+                      <img src="./icons/copy-btn.svg" alt="">
+                      <p>Copie o código</p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="etapa-02">
+                <span class="step-label">2ª Etapa</span>
+                <span class="step-title">Obtenha o código de verificação</span>
+                <p class="modal-subtitle mt-2">Digite o código de 6 dígitos disponibilizado em seu aplicativo autenticador.</p>
+                
+                <div class="input-title lablel">
+                  <label for="title">Insira o código de verificação</label>
+                </div>
+                
+                <div class="verify-inputs d-flex mt-3">
+                  <input type="text" maxlength="1" />
+                  <input type="text" maxlength="1" />
+                  <input type="text" maxlength="1" />
+                  <input type="text" maxlength="1" />
+                  <input type="text" maxlength="1" />
+                  <input type="text" maxlength="1" />
+                </div>
+              </div>
+    
+            </div>
+          </div>
+  
+          <div class="modal-footer">
+            <button class="btn btn-confirm">
+              <p>Configurar 2FA</p>
+            </button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('collapsed');
+    }
+  </script>
+
+</body>
+</html>
