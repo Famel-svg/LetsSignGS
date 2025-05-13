@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 97%;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.left-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  padding-top: 0;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  object-fit: contain;
+}
+
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #2b2b84;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile img {
+  width: 44px;
+  height: 44px;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: contain; 
+  padding-right: 10px;
+  display: inline-block;
+}
+
+.down-arrow img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Sidebar + Layout */
+.container {
+  overflow-y:hidden ;
+  display: flex;
+  height: 100vh;
+  padding-top: 60px;
+}
+
+.sidebar {
+  width: 240px;
+  background: linear-gradient(to right, #353470 70px, #3D3D85 70px);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+}
+
+.icon img{
+  width: 30px;
+  height: 30px;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 20px 0;
+}
+
+.menu ul li {
+  display: flex;
+  align-items: center;
+  padding: 30px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu ul li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu .icon {
+  padding-right: 30px;
+  margin-right: 10px;
+  font-size: 18px;  
+}
+
+.menu .text {
+  white-space: nowrap;
+  transition: opacity 0.3s, width 0.3s;
+}
+
+.sidebar.collapsed .text {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.ajuda {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.ajuda .icon {
+  margin-right: 10px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.illustration {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  opacity: 0.8;
+}
+
+.welcome-container {
+  position: relative;
+  text-align: center;
+  padding: 6px;
+  width: 80%; 
+}
+
+.welcome-text {
+  position: absolute;
+  top: -170px; /* <-- AQUI VOCÊ AJUSTA. Menor = mais acima */
+  left: 50%;
+  transform: translateX(-50%);
+  color:  #353470 ;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.1);
+  font-family: 'Outfit', sans-serif;
+}
+
+.welcome-text p {
+  font-size: 16px;
+  color: #2b2b84;
+  font-family: 'Outfit', sans-serif;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.welcome-text strong {
+  display: block;
+  font-size: 20px;
+  color: #2b2b84;
+  margin-bottom: 5px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center; /* Centraliza os cards */
+  gap: 40px;               /* Espaço entre os cards */
+  padding: 40px;
+  flex-wrap: wrap;         /* Permite quebrar linha em telas pequenas */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  color: 353470;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+

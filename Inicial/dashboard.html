@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LetsSign - Painel</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="top-header">
+    <div class="left-group">
+      <span class="logo">
+        <img src="https://www.letssign.com.br/wp-content/uploads/2023/06/Logo-sign.svg" alt="LetsSign" />
+      </span>
+      <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+      
+    </div>
+    <div class="actions">
+      <span class="profile">
+        <img src="https://img.icons8.com/material-outlined/100/6A6A6A/user-male-circle.png" alt="user-male-circle">
+         <div class="dropdown-menu" id="dropdown-menu">
+
+  
+        </div>
+      </span>      
+      <span class="down-arrow"><img src="https://img.icons8.com/metro/100/6A6A6A/expand-arrow.png" alt="expand-arrow"/></span>
+    </div>
+  </div>        
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <nav class="menu">
+        <ul>
+          <li><span class="icon"><img src="https://img.icons8.com/external-tal-revivo-light-tal-revivo/96/FFFFFF/external-traditional-residence-home-having-shelter-roof-design-basic-light-tal-revivo.png" alt="external-traditional-residence-home-having-shelter-roof-design-basic-light-tal-revivo"/></span><span class="text">Acesso rápido</span></li>
+          <li><span class="icon"><img src="https://img.icons8.com/parakeet-line/100/FFFFFF/document.png" alt="document"/></span><span class="text">Documentos</span></li>
+          <li><span class="icon"><img src="https://img.icons8.com/parakeet-line/100/FFFFFF/address-book--v2.png" alt="address-book--v2"/></span><span class="text">Contatos</span></li>
+          <li><span class="icon"><img src="https://img.icons8.com/ios/100/FFFFFF/parallel-tasks.png" alt="parallel-tasks"/></span><span class="text">Integrações</span></li>
+          <li><span class="icon"><img src="https://img.icons8.com/puffy/100/FFFFFF/settings.png" alt="settings"/></span><span class="text">Preferências</span></li>
+        </ul>
+        <div class="ajuda">
+          <span class="icon"><img src="https://img.icons8.com/material-rounded/100/FFFFFF/headset.png" alt="headset"/></span><span class="text">Ajuda</span>
+        </div>
+      </nav>
+    </aside>
+      </header>
+      <section class="content">
+      <div class="welcome-container">
+         <div class="welcome-text">
+          <h1>Bem-vindo !</h1>
+            <p>Escolha uma opção abaixo ou utilize o menu lateral.</p>
+         </div>
+
+      <div class="card-container">
+         <div class="card">
+          <img src="https://img.icons8.com/fluency/96/key.png" alt="ícone chave" />
+            <h3>Enviar um Documento</h3>
+              <p>Selecione um arquivo que deseja enviar para assinar</p>
+         </div>
+
+          <div class="card">
+            <img src="https://img.icons8.com/fluency/96/document.png" alt="ícone assinaturas" />
+              <h3>Minhas Assinaturas</h3>
+              <p>Histórico de assinaturas</p>
+          </div>
+      </div>
+      
+      </section>
+    </div>
+    </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('collapsed');
+    }
+  </script>
+  <script src="./app.js"></script>
+</body>
+</html>
